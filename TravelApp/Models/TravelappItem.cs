@@ -1,4 +1,4 @@
-namespace TravelappItem.Models;
+namespace TravelApp.Models;
 
 public class TravelappItem
 {

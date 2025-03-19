@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace TravelappItem.Models;
-public class TravelappContex : DbContext
+namespace TravelApp.Models;
+public class TravelappContext : DbContext
 {
-    public TravelappContex(DbContextOption<TravelappContex> options) : base(options)
+    public TravelappContext(DbContextOption<TravelappContext> options) : base(options)
     {
 
     }
