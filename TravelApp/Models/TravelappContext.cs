@@ -1,12 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-
 namespace TravelApp.Models;
 public class TravelappContext : DbContext
 {
-    public TravelappContext(DbContextOption<TravelappContext> options) : base(options)
+    public TravelappContext(DbContextOptions<TravelappContext> options) : base(options)
     {
 
     }
-    public DbSet<TravelappItem> TodoItems { get; set; } = null;
+    public DbSet<TravelappItem> TravelappItems { get; set; } = null;
 }
 

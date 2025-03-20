@@ -2,6 +2,7 @@ namespace TravelApp.Models;
 
 public class TravelappItem
 {
+    public long Id { get; set; }
     public string Title { get; set; }
     public string DateStart { get; set; }
     public string DateEnd { get; set; }
