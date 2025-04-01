@@ -9,6 +9,10 @@ builder.Services.AddDbContext<TravelappContext>(opt =>
      opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder =>
+{
+    builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+}));
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -20,6 +24,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCors("ApiCorsPolicy");
 
 app.MapControllers();
 
